@@ -2,6 +2,12 @@
 
 Based on alpine running the b2 command from [Backblaze b2](https://www.backblaze.com/b2/docs/quick_command_line.html).
 
+# Building
+
+```
+$ docker build -t super-b2 .
+```
+
 # Environment Variables
 
 Docker entrypoint expects the following variables:
