@@ -4,7 +4,7 @@ RUN apk add --no-cache py2-pip && \
     pip install b2 && \
     mkdir -p /scratch
 
-COPY entry.sh /
+COPY docker/entry.sh /
 
 WORKDIR /scratch
 

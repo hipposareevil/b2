@@ -1,15 +1,37 @@
-# Backblaze b2 docker image
+# Backblaze b2 Utility
 
-Based on alpine running the b2 command from [Backblaze b2](https://www.backblaze.com/b2/docs/quick_command_line.html).
+This repo contains scripts and Docker Images for uploading files to [Backblaze b2](https://www.backblaze.com/b2/cloud-storage.html).
 
-# Environment Variables
+A Docker Image is created from this repo. The most recent version lives on [Dockerhub](https://hub.docker.com/repository/docker/hipposareevil/b2).
 
-Docker entrypoint expects the following variables:
+# Upload Script
+
+The *upload_to_b2.sh* script is used to upload files from a local directory to a b2 bucket. Documentation in file.
+
+This requires the *jq* script to exist locally.
+
+
+# Docker Image
+
+Alpine based image containing the [Backblaze b2](https://www.backblaze.com/b2/docs/quick_command_line.html) command.
+
+
+## Building
+
+```
+$ docker build -t b2-super-funk .
+...
+$
+```
+
+## Environment Variables
+
+Tje Docker entrypoint expects the following variables:
 
 * KEY_ID = Application Key ID
 * APPLICATION_KEY = Application Key
 
-# Usage
+## Usage
 
 ```
 docker run --rm \
@@ -36,4 +58,5 @@ This program provides command-line access to the B2 service.
 $
 
 ```
+
 
